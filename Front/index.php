@@ -37,9 +37,6 @@
                         <a class="nav-link" href="#">Cartas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Decks</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">Manga/Anime</a>
                     </li>
                     <li class="nav-item">
