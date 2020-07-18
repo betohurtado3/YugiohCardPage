@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
 
-    <title>Yu-gi-oh! Card Page</title>
+    <title>Yu-Gi-Oh! Card Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
