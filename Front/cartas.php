@@ -21,20 +21,20 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #C12705;">
         <div class="container">
-            <img src="../images/yugi.png" height="50">
+           <img src="../images/yugi.png" height="50">
             <a class="navbar-brand" href="#">Yu-Gi-Oh! - Fan Data Page</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio
-                            <span class="sr-only">(current)</span>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Inicio
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="cartas.php">Cartas</a>
+                        <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Manga/Anime</a>
@@ -49,31 +49,13 @@
 
     <!-- Page Content -->
     <div class="container">
-
-        <!-- Jumbotron Header -->
-        <header class="jumbotron my-4 text-center">
-            <img src="../images/home.jpg" height="350">
-        </header>
-
-        <!-- Menu buttons -->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="text-center">
-                    <button type="button" class="btn btn-outline-danger">Noticias</button>
-                    <button type="button" class="btn btn-outline-danger">Eventos</button>
-                    <button type="button" class="btn btn-outline-danger">Reglas</button>
-                    <button type="button" class="btn btn-outline-danger">Banlist</button>
-                </div>
-            </div>
-        </div>
-
-        <br>
-        <hr>
+       <br>
+       <br>
         <!-- Page Features -->
         <div class="row text-center">
 
             <!--Carta 1-->
-
+            
             <?php
                 require "../Back/conecta.php";
                 $sql = "SELECT * FROM Cartas";
@@ -83,14 +65,14 @@
             for($i = $num; $objeto = $res->fetch_object() ; $i++)
             {
                 ?>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img height="250" src="../images/<?= $objeto->Ilustracion ?>">
-
+                
+             <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100" id="<?= $objeto->ID?>">
+                    <img  height="250" src="../images/<?= $objeto->Ilustracion ?>"> 
+                    
                     <div class="card-body">
                         <h4 class="card-title"><?= $objeto->Nombre ?></h4>
-
+                        
                         <p class="card-text"><?= $objeto->Descripcion ?></p>
                     </div>
                     <div class="card-footer">
@@ -101,25 +83,14 @@
             <?php
             }
             ?>
-
+            
 
         </div>
         <!-- /.row -->
 
     </div>
     <!-- /.container -->
-
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Yu-Gi-Oh! <br>(遊 戯 王, Yū-gi-ō;? «El rey de los juegos») </h1>
-            <p class="lead">Es un manga creado por Kazuki Takahashi, que ha dado lugar a una franquicia, además de múltiples series de anime, juegos de cartas y numerosos videojuegos.</p>
-            <a href="#" class="btn btn-primary">Información completa</a>
-        </div>
-    </div>
-
-
-
+  
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
