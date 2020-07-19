@@ -17,7 +17,9 @@
 </head>
 
 <body>
-
+   
+   
+   
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #C12705;">
         <div class="container">
@@ -37,7 +39,7 @@
                         <a class="nav-link" href="cartas.php">Cartas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Manga/Anime</a>
+                        <a class="nav-link" href="anime.php">Manga/Anime</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Información</a>
@@ -59,11 +61,18 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="text-center">
-                    <button type="button" class="btn btn-outline-danger">Noticias</button>
+                    <a href="https://www.yugioh-card.com/uk/news/"><button type="button" class="btn btn-outline-danger">Noticias</button></a>
+                    
                     <button type="button" class="btn btn-outline-danger">Eventos</button>
-                    <button type="button" class="btn btn-outline-danger">Reglas</button>
-                    <button type="button" class="btn btn-outline-danger">Banlist</button>
+                    
+                    <a href="https://img.yugioh-card.com/es/rulebook/SD16_RB_es-low.pdf"><button type="button" class="btn btn-outline-danger">Reglas</button></a>
+                    
+                     <a href="https://www.yugioh-card.com/uk/gameplay/detail.php?id=1155"><button type="button" class="btn btn-outline-danger">Banlist</button></a>
+                    
                 </div>
+                
+                
+                
             </div>
         </div>
 
@@ -76,7 +85,7 @@
 
             <?php
                 require "../Back/conecta.php";
-                $sql = "SELECT * FROM Cartas";
+                $sql = "SELECT * FROM Cartas Limit 4";
             $res = mysqli_query($con, $sql);
             $num = mysqli_num_rows($res);
             

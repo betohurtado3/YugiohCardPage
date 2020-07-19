@@ -13,7 +13,6 @@
     <!-- Custom styles for this template -->
     <link href="../css/heroic-features.css" rel="stylesheet">
     <link rel="icon" href="../images/icon.png">
-
 </head>
 
 <body>
@@ -21,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #C12705;">
         <div class="container">
-           <img src="../images/yugi.png" height="50">
+            <img src="../images/yugi.png" height="50">
             <a class="navbar-brand" href="#">Yu-Gi-Oh! - Fan Data Page</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,12 +31,12 @@
                         <a class="nav-link" href="index.php">Inicio
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="cartas.php">Cartas</a>
-                        <span class="sr-only">(current)</span>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="anime.php">Manga/Anime</a>
+                        <a class="nav-link" href="cartas.php">Cartas</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Manga/Anime</a>
+                        <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Información</a>
@@ -48,49 +47,11 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
-       <br>
-       <br>
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <!--Carta 1-->
-            
-            <?php
-                require "../Back/conecta.php";
-                $sql = "SELECT * FROM Cartas";
-            $res = mysqli_query($con, $sql);
-            $num = mysqli_num_rows($res);
-            
-            for($i = $num; $objeto = $res->fetch_object() ; $i++)
-            {
-                ?>
-                
-             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100" id="<?= $objeto->ID?>">
-                    <img  height="250" src="../images/<?= $objeto->Ilustracion ?>"> 
-                    
-                    <div class="card-body">
-                        <h4 class="card-title"><?= $objeto->Nombre ?></h4>
-                        
-                        <p class="card-text"><?= $objeto->Descripcion ?></p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="det_carta.php?ID=<?=$objeto->ID?>" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <?php
-            }
-            ?>
-            
-
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-  
+    <br><br><br>
+    <center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eehSaI8P1qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+    <br><br><br><br><br><br>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">

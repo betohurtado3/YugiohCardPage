@@ -50,7 +50,7 @@
                         <a class="nav-link" href="cartas.php">Cartas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Manga/Anime</a>
+                        <a class="nav-link" href="anime.php">Manga/Anime</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Información</a>
